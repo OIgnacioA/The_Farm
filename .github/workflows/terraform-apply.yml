@@ -22,6 +22,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Print Organization and Token
+        run: |
+          echo "TF_CLOUD_ORGANIZATION: ${{ env.TF_CLOUD_ORGANIZATION }}"
+          echo "TF_API_TOKEN (first 4 and last 4 characters): ${TF_API_TOKEN:0:4}****${TF_API_TOKEN: -4}"
+        env:
+          TF_CLOUD_ORGANIZATION: ${{ env.TF_CLOUD_ORGANIZATION }}
+          TF_API_TOKEN: ${{ env.TF_API_TOKEN }}
+
       - name: Upload Configuration
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
         id: apply-upload
