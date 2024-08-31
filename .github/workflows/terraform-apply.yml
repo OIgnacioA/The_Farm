@@ -30,10 +30,6 @@ jobs:
           TF_CLOUD_ORGANIZATION: ${{ env.TF_CLOUD_ORGANIZATION }}
           TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
 
-      - name: Print Hello
-        run: echo "hilo D"
-
-
       - name: Upload Configuration
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
         id: apply-upload
