@@ -31,7 +31,7 @@ jobs:
           TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
 
       - name: Print Hello
-        run: echo "hola"
+        run: echo "hi"
 
       - name: Upload Configuration
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
