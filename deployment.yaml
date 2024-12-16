@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: sehent/hello-world:latest
+        image: sehent/thefarm-app:latest
         ports:
         - containerPort: 3000
 ---
