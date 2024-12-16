@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clonar código') {
             steps {
-                git 'https://github.com/tu-usuario/tu-repositorio.git'
+                git 'https://github.com/OIgnacioA/The_Farm.git'
             }
         }
         stage('Construir Docker') {
